@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">ReviewHub</div>
+    <div class="switch">
+      <button onclick="switchContent('movies')">Movies</button>
+      <button onclick="switchContent('books')">Books</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for movies or books...">
+      <button onclick="performSearch()">Search</button>
+    </div>
+    <div class="profile">
+      <button onclick="showProfile()">Profile</button>
+      <button id="adminButton" onclick="showAdminPanel()">Admin</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <section id="login" class="page">
+    <h2>Login Required</h2>
+    <p>Please <a href="login.html">log in</a> to access the content.</p>
+  </section>
+
+  <section id="profile" class="page hidden">
+    <h2>User Profile</h2>
+    <p id="user-info"></p>
+  </section>
+
+  <section id="admin" class="page hidden">
+    <h2>Admin Panel</h2>
+
+    <button onclick="showAddItemForm()">Add New Item</button>
+
+    <div id="admin-controls">
+      <h3>Reported Users</h3>
+      <div id="admin-user-list" style="margin-top: 20px; text-align: left;"> </div>
+    </div>
+  </section>
+
+
+  <section id="addItemForm" class="page hidden">
+    <h2>Add New Item</h2>
+    <form id="addNewItemForm">
+      <div class="form-group">
+        <label for="itemType">Type:</label>
+        <select id="itemType" required>
+          <option value="">Select Type</option>
+          <option value="movies">Movie</option>
+          <option value="books">Book</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="itemSection">Section:</label>
+        <select id="itemSection" required>
+          <option value="">Select Section</option>
+          <option value="trending">Trending</option>
+          <option value="recommended">Recommended</option>
+          <option value="upcoming">Upcoming</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="itemTitle">Title:</label>
+        <input type="text" id="itemTitle" placeholder="Enter title" required>
+      </div>
+      <div class="form-group">
+        <label for="itemImageUrl">Image URL:</label>
+        <input type="url" id="itemImageUrl" placeholder="Enter image URL" required>
+      </div>
+      <div class="form-group">
+        <label for="itemDescription">Description:</label>
+        <textarea id="itemDescription" placeholder="Enter item description" rows="5"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Add Item</button>
+        <button type="button" onclick="cancelAddItem()">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+
+  <section id="main" class="page hidden">
+
+    <h2 id="content-title">Movies </h2>
+    <div class="content-carousel">
+      <div class="carousel-container" id="trending"></div>
+    </div>
+
+    <h2>Recommended</h2>
+    <div class="content-carousel">
+      <div class="carousel-container" id="recommended"></div>
+    </div>
+
+    <h2>Upcoming</h2>
+    <div class="content-carousel">
+      <div class="carousel-container" id="upcoming"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

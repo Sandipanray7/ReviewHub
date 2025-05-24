@@ -1,0 +1,562 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Darker background for Hotstar feel */
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  /* Use flex-wrap to allow items to wrap on smaller screens, preventing overflow */
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items with space between them */
+  align-items: center;
+  background-color: #0d0d0d; /* Even darker navbar */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav .logo {
+  font-size: 1.8em; /* Larger logo */
+  font-weight: bold;
+  color: #e50914; /* Netflix red, or similar bold color */
+  margin-right: 20px; /* Space from next item */
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  flex-grow: 1; /* Allows it to take available space */
+  max-width: 400px; /* Limit search bar width */
+  margin: 5px 20px; /* Add some vertical and horizontal margin */
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1; /* Input takes up available space */
+  padding: 8px 15px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9em;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #e50914; /* Red search button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #c00812;
+}
+
+/* Flex container for switch and profile buttons to keep them in a row */
+nav .switch,
+nav .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons within these divs */
+    margin: 5px 0; /* Add some vertical margin for wrapping */
+}
+
+nav .switch button{
+  width: 150px;
+   padding: 8px 15px; /* Slightly larger buttons */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+nav .profile button {
+  /* Removed fixed width from .switch button */
+  /* Removed margin-left as gap on parent is now handling spacing */
+  padding: 8px 15px; /* Slightly larger buttons */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+nav .switch button:hover,
+nav .profile button:hover {
+  background-color: #555;
+}
+
+.page {
+  padding: 20px;
+  max-width: 1200px; /* Max width for content */
+  margin: 20px auto; /* Center content */
+}
+.page.hidden {
+  display: none;
+}
+
+.page h2 {
+  margin-top: 0;
+  color: #e50914; /* Highlight headings */
+  text-align: center; /* Center main headings */
+  margin-bottom: 20px;
+}
+
+/* Login and Profile page styling (basic, adjust as needed) */
+#login, #profile, #admin, #addItemForm { /* Added #addItemForm */
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-width: 600px; /* Constrain width for forms */
+  margin: 20px auto;
+}
+
+#login p, #login a {
+    color: #bbb;
+}
+#login a {
+    color: #e50914;
+    text-decoration: none;
+}
+#login a:hover {
+    text-decoration: underline;
+}
+
+/* Add Item Form Specific Styles */
+#addNewItemForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form groups */
+    margin-top: 20px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #eee;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #e50914;
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #c00812;
+}
+
+.form-actions button[type="button"] { /* For Cancel button */
+    background-color: #555;
+    color: white;
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #777;
+}
+
+
+/* Main Content (Hotstar-like) */
+.content-carousel {
+  position: relative;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Keep items on a single line */
+  padding-bottom: 15px; /* Space for scrollbar */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #555 #1a1a1a; /* Firefox */
+}
+
+/* Custom scrollbar for Webkit browsers */
+.content-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.content-carousel::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.content-carousel::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+}
+
+.carousel-container {
+  display: inline-flex; /* Use inline-flex for horizontal scroll */
+  gap: 15px; /* Space between posters */
+  padding: 10px; /* Padding around posters */
+}
+
+.content-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 150px; /* Fixed width for posters */
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space out image and title */
+}
+
+.content-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+.content-item img {
+  width: 100%;
+  height: 220px; /* Fixed height for posters */
+  object-fit: cover; /* Ensure images cover the area */
+  border-bottom: 1px solid #333;
+}
+
+.content-item span {
+  display: block;
+  padding: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  white-space: normal; /* Allow title to wrap */
+  word-wrap: break-word; /* Break long words */
+  color: #fff;
+}
+
+/* Review Page Styling */
+#review-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#review-page h2 {
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#review-item-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#review-item-details img {
+  width: 200px; /* Larger image on detail page */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#review-item-info h3 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#review-item-info p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+#review-section h3 {
+  color: #e50914;
+  margin-bottom: 15px;
+}
+
+#review-input {
+  width: calc(100% - 20px); /* Account for padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px;
+}
+
+#submit-review-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#submit-review-btn:hover {
+  background-color: #c00812;
+}
+
+#item-reviews {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+#item-reviews h3 {
+  color: #e50914;
+  margin-bottom: 15px;
+}
+
+.review-card {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.review-card p {
+  margin: 0 0 5px 0;
+  color: #eee;
+}
+
+.review-card .review-meta {
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+/* General button styling for admin panel (initial buttons) */
+#admin button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+#admin button:hover {
+    background-color: #c00812;
+}
+
+#admin-controls pre {
+    background-color: #0d0d0d;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#admin-user-list p {
+  margin: 5px 0;
+}
+
+#admin-user-list button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+
+/* Rating input styles */
+.rating-input {
+    font-size: 2em; /* Larger stars */
+    cursor: pointer;
+    margin-bottom: 15px;
+    direction: ltr; /* Stars from right to left */
+    display: inline-block; /* Allow stars to be on one line */
+}
+
+.rating-input button.star {
+  font-size: 1.2em;
+  display: inline-block;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  padding: 5px;
+}
+
+.rating-input button.star.selected
+{
+  
+  color: #f39c12;
+}
+.rating-input button.star:hover,
+.rating-input button.star:hover ~ button.star {
+  color: #ccc; /* Keep future stars dim */
+}
+
+.rating-input button.star:hover ~ button.star,
+.rating-input button.star:hover ~ button.star.selected {
+  color: #ccc !important; /* Prevent lighting stars after the hovered one */
+}
+
+.rating-input button.star:hover,
+.rating-input button.star:hover ~ button.star {
+  color: #f39c12;
+}
+
+/* This actually needs JavaScript for ideal hover behavior */
+
+
+/* Average rating display styles */
+.rating-display {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #f39c12; /* Match theme color */
+    display: flex;
+    justify-content: center; /* Center the rating */
+    align-items: center;
+    gap: 5px;
+}
+
+.stars-display .star-display {
+    color: #f39c12; /* Filled star color */
+    font-size: 1.2em;
+}
+
+.stars-display .star-display:not(.filled) {
+    color: #555; /* Unfilled star color */
+}
+
+/* For half-filled stars if you implement them visually (more complex CSS) */
+.stars-display .star-display.half-filled {
+    /* You might need a background-image or linear-gradient for a true half-star */
+    /* For simplicity, we'll just color it as a full star for now */
+    color: #f39c12;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Individual review rating display */
+.review-rating-display {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.review-rating-display .star-display {
+    color: #f39c12; /* Filled star color */
+    font-size: 1em;
+}
+
+.review-rating-display .star-display:not(.filled) {
+    color: #555; /* Unfilled star color */
+}
+
+/* Layout adjustments for review-item-details */
+#review-item-details {
+    display: flex; /* Use flexbox */
+    gap: 30px; /* Space between image and info */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center content when wrapped */
+    text-align: center; /* Center text within the info div when wrapped */
+}
+
+#review-item-image {
+    max-width: 250px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+#review-item-info {
+    flex-grow: 1; /* Allow info to take remaining space */
+    text-align: center; /* Align text to the left within the info div */
+    max-width: 600px; /* Limit info width */
+}
+
+#review-item-info h3 {
+    margin-top: 0;
+    font-size: 2.2em;
+    color: #e50914; /* Netflix red */
+}
+
+#review-item-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+/* Adjust review-section and item-reviews for better spacing */
+#review-section, #item-reviews {
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}

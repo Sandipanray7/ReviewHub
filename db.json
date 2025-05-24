@@ -1,0 +1,306 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "sandipan",
+      "email": "sandipanray7@gmail.com",
+      "password": "sandipan7",
+      "role": "user",
+      "suspended": true
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "user": "admin",
+      "content": "first review",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-21T18:54:46.458Z",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "user": "admin",
+      "content": "Good movie..highly recommended to watch",
+      "item": "m2",
+      "type": "movies",
+      "timestamp": "2025-05-22T05:05:40.394Z",
+      "rating": 2
+    },
+    {
+      "id": "4",
+      "user": "admin",
+      "content": "great movie",
+      "item": "m2",
+      "type": "movies",
+      "timestamp": "2025-05-22T05:06:03.801Z",
+      "rating": 1
+    },
+    {
+      "id": "5",
+      "user": "admin",
+      "content": "fantastic",
+      "item": "m2",
+      "type": "movies",
+      "timestamp": "2025-05-22T05:06:28.937Z",
+      "rating": 1
+    },
+    {
+      "id": "6",
+      "user": "admin",
+      "content": "great",
+      "item": "m2",
+      "type": "movies",
+      "timestamp": "2025-05-22T05:10:12.032Z",
+      "rating": 1
+    },
+    {
+      "id": "16",
+      "user": "admin",
+      "content": "gykutry",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:15:13.843Z",
+      "rating": 4
+    },
+    {
+      "id": "17",
+      "user": "admin",
+      "content": "hgt",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:15:31.411Z",
+      "rating": 2
+    },
+    {
+      "id": "18",
+      "user": "admin",
+      "content": "ftjr",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:15:41.435Z",
+      "rating": 5
+    },
+    {
+      "id": "19",
+      "user": "admin",
+      "content": "asdfwf",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:25:11.513Z",
+      "rating": 4
+    },
+    {
+      "id": "20",
+      "user": "admin",
+      "content": "hello",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:31:26.032Z",
+      "rating": 4
+    },
+    {
+      "id": "21",
+      "user": "admin",
+      "content": "i am giving 3 star",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-22T16:31:43.545Z",
+      "rating": 3
+    },
+    {
+      "id": "22",
+      "user": "admin",
+      "content": "i'm giving 4star review",
+      "item": "b2",
+      "type": "books",
+      "timestamp": "2025-05-22T16:32:31.969Z",
+      "rating": 4
+    },
+    {
+      "id": "23",
+      "user": "user",
+      "content": "must watch",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-24T07:03:12.129Z",
+      "rating": 5
+    },
+    {
+      "id": "24",
+      "user": "sandipan",
+      "content": "great movie",
+      "item": "m3",
+      "type": "movies",
+      "timestamp": "2025-05-24T07:04:56.200Z",
+      "rating": 4
+    },
+    {
+      "id": "25",
+      "user": "sandipan",
+      "content": "awerga",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-24T07:45:52.180Z",
+      "rating": 4
+    },
+    {
+      "id": "26",
+      "user": "sandipan",
+      "content": "hello",
+      "item": "m2",
+      "type": "movies",
+      "timestamp": "2025-05-24T07:47:06.850Z",
+      "rating": 5
+    },
+    {
+      "id": "27",
+      "user": "admin",
+      "content": "srga",
+      "item": "m1",
+      "type": "movies",
+      "timestamp": "2025-05-24T08:01:29.327Z",
+      "rating": 4
+    }
+  ],
+  "reportedUsers": [
+    {
+      "username": "user",
+      "reason": "Inappropriate content"
+    },
+    {
+      "username": "sandipan",
+      "reason": "Spam review"
+    },
+    {
+      "username": "sandipan",
+      "reason": "toxic review"
+    },
+    {
+      "username": "sandipan",
+      "reason": "toxic"
+    },
+    {
+      "username": "sandipan",
+      "reason": "toxic content"
+    },
+    {
+      "username": "user",
+      "reason": "toxiic message"
+    }
+  ],
+  "content": {
+    "movies": {
+      "trending": [
+        {
+          "id": "m1",
+          "title": "Inception",
+          "imageUrl": "https://m.media-amazon.com/images/I/71thFiIUSpL._AC_UF894,1000_QL80_DpWeblab_.jpg",
+          "description": "A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+        },
+        {
+          "id": "m2",
+          "title": "Interstellar",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg",
+          "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+        },
+        {
+          "id": "m3",
+          "title": "Dune: Part Two",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "description": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family."
+        },
+        {
+          "id": "m4",
+          "title": "The Matrix",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg",
+          "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
+        },
+        {
+          "id": "m5",
+          "title": "12th Fail",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTE3OTIxZDYtNjA0NC00N2YxLTg1NGQtOTYxNmZkMDkwOWNjXkEyXkFqcGc@._V1_.jpg",
+          "description": "Based on the true story of IPS officer Manoj Kumar Sharma, 12th Fail highlights the struggles of countless students who attempt the UPSC entrance exam. It follows the journey of Manoj and his experience to his son, Raghav who struggles with being failed at getting an offer to college despite being an excellent student."
+        }
+      ],
+      "recommended": [
+        {
+          "id": "m6",
+          "title": "Blade Runner 2049",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlbNtH-VUeLeM-M7bcZZAm2P3CBd1d3sXIA&s",
+          "description": "A young blade runner's discovery of a long-buried secret leads him to track down the former blade runner who has been missing for thirty years."
+        },
+        {
+          "id": "m7",
+          "title": "The Dark Knight",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+          "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+        }
+      ],
+      "upcoming": [
+        {
+          "id": "m8",
+          "title": "War II",
+          "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTFjYzM5Y2ItN2Q3YS00YzBlLTllNzYtNTkzZjBmY2Y5NmEwXkEyXkFqcGc@._V1_.jpg",
+          "description": "Major Kabir Dhaliwal returns to combat a new threat to the nation in a perilous undercover mission."
+        }
+      ]
+    },
+    "books": {
+      "trending": [
+        {
+          "id": "b1",
+          "title": "1984",
+          "imageUrl": "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/5/e/l/1984-original-imagrzqc4fjwmhqq.jpeg?q=90&crop=false",
+          "description": "George Orwell's dystopian masterpiece, 1984, explores a totalitarian future where a manipulative government, Big Brother, controls every aspect of its citizens' lives."
+        },
+        {
+          "id": "b2",
+          "title": "Brave New World",
+          "imageUrl": "https://www.theliterarygiftcompany.com/cdn/shop/products/brave-new-world-poster-633-p.jpeg?v=1491915748",
+          "description": "Brave New World is a dystopian novel by English author Aldous Huxley, written in 1931 and published in 1932. Largely set in a futuristic World State, whose citizens are pharmaceutically happy and are genetically engineered into an intelligence-based social hierarchy."
+        }
+      ],
+      "recommended": [
+        {
+          "id": "b3",
+          "title": "Sapiens: A Brief History of Humankind",
+          "imageUrl": "https://m.media-amazon.com/images/I/616ZyheN31L._AC_UF1000,1000_QL80_DpWeblab_.jpg",
+          "description": "Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari, first published in Hebrew in Israel in 2011 based on a course he taught at the Hebrew University of Jerusalem, and in English in 2014."
+        },
+        {
+          "id": "b4",
+          "title": "The Silent Patient",
+          "imageUrl": "https://m.media-amazon.com/images/I/81JJPDNlxSL.jpg",
+          "description": "The Silent Patient is a 2019 psychological thriller novel by British author Alex Michaelides. The novel tells the story of Alicia Berenson, a famous painter who shoots her husband, and Theo Faber, a psychotherapist who is determined to unravel what happened."
+        }
+      ],
+      "upcoming": [
+        {
+          "id": "b5",
+          "title": "The Midnight Library",
+          "imageUrl": "https://m.media-amazon.com/images/I/81J6APjwxlL.jpg",
+          "description": "The Midnight Library is a novel by Matt Haig that explores the choices we make in life and the regrets we carry. It follows Nora Seed, who finds herself in a library between life and death, where each book represents a different version of her life."
+        },
+        {
+          "id": "b6",
+          "title": "AI 2041: Ten Visions for Our Future",
+          "imageUrl": "https://m.media-amazon.com/images/I/61xjUk6GmyL._UF1000,1000_QL80_.jpg"
+        }
+      ]
+    }
+  }
+}

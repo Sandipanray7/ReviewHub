@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">ReviewHub</div>
+    <div class="switch">
+      <button onclick="window.location.href='index.html?type=movies'">Movies</button>
+      <button onclick="window.location.href='index.html?type=books'">Books</button>
+    </div>
+    <div class="profile">
+      <button onclick="window.location.href='index.html?page=profile'">Profile</button>
+      <button onclick="window.location.href='index.html?page=admin'">Admin</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <section id="review-page" class="page">
+    <button onclick="window.location.href='index.html'"
+      style="margin-bottom: 20px; background-color: #555; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">&larr;
+      Back to Home</button>
+
+    <h2 id="review-page-title"></h2>
+
+    <div id="review-item-details">
+      <img id="review-item-image" src="" alt="Item Poster">
+      <div id="review-item-info">
+        <h3 id="review-item-title"></h3>
+        <div class="rating-display">
+          <h4>Rating: <span id="average-rating">N/A</span> / 5 <span class="stars-display" id="average-stars"></span>
+          </h4>
+        </div>
+        <p id="review-item-description">Loading description...</p>
+      </div>
+    </div>
+
+    <div id="review-section">
+      <h3>Rate and Write Your Review</h3>
+      <div class="rating-input">
+        <button type="button" class="star" data-value="1">&#9733;</button>
+        <button type="button" class="star" data-value="2">&#9733;</button>
+        <button type="button" class="star" data-value="3">&#9733;</button>
+        <button type="button" class="star" data-value="4">&#9733;</button>
+        <button type="button" class="star" data-value="5">&#9733;</button>
+      </div>
+      <input type="hidden" id="review-rating" value="0">
+
+      <textarea id="review-input" placeholder="Share your thoughts..." rows="5"></textarea>
+      <button id="submit-review-btn" onclick="submitReview()">Submit Review</button>
+    </div>
+    <div id="item-reviews">
+      <h3>User Reviews</h3>
+      <div id="item-reviews-list">
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // This script should be within review.html to ensure loadReviewPageDetails runs.
+    // It's already handled by the general DOMContentLoaded check in script.js now,
+    // but keeping this here for clarity on what's expected on this page.
+    // If you remove this, ensure script.js is loaded and handles page specific logic.
+  </script>
+</body>
+
+</html>
